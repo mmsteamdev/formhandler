@@ -23,10 +23,7 @@ public class MailHandler{
     public MailHandler() {
         this.to_env = System.getenv("MAIL_TO");
         this.subject = System.getenv("MAIL_SUBJECT");
-//        this.uri = "http://mail1:587/mail";
-//        this.uri = "http://localhost:587/mail";
-        this.uri = "http://fitjarmail:587/mail";
-//        this.uri = System.getenv("MAIL_HANDLER_URL");
+        this.uri = System.getenv("MAIL_HANDLER_URL");
 
         this.user_template_path = "resources/template_user.html";
         this.admin_template_path = "resources/template_admin.html";

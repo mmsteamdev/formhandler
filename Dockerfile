@@ -19,6 +19,7 @@ ENV MYSQL_ROOT_PASSWORD='12wykladziny34#12'
 ENV MYSQL_DATABASE='wykladziny'
 ENV MAIL_TO='mkoziel045@gmail.com'
 ENV MAIL_SUBJECT='Order'
+ENV MAIL_HANDLER_URI = 'http://fitjarmail:587/mail'
 #expose ports
 EXPOSE 80
 EXPOSE 4000

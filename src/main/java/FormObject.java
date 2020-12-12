@@ -5,7 +5,7 @@ import java.util.Iterator;
 import java.util.LinkedHashMap;
 
 public class FormObject {
-    // Linked Hashmap of key, value parring from JSON message
+    // Linked HashMap of key, value parring from JSON message
     private LinkedHashMap<String, String> jsonDict;
 
     public FormObject(String msg){
