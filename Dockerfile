@@ -12,14 +12,14 @@ COPY --from=MAVEN_BUILD /target/twojewykladzinyformhandler-1.0-SNAPSHOT-jar-with
 COPY ./resources ./resources
 #COPY --from=MAVEN_BUILD /home/~/.m2/ /home/~/.m2/
 #set environmental variables to database
-ENV MYSQL_URL
-ENV MYSQL_USER
-ENV MYSQL_PASSWORD
-ENV MYSQL_ROOT_PASSWORD
-ENV MYSQL_DATABASE
-ENV MAIL_TO
-ENV MAIL_SUBJECT
-ENV MAIL_HANDLER_URI
+ENV MYSQL_URL='jdbc:mysql://twojewykladzinybaza_wykladzinymysql_1:3306'
+ENV MYSQL_USER='wykladziny'
+ENV MYSQL_PASSWORD='12wykladziny34#12'
+ENV MYSQL_ROOT_PASSWORD='12wykladziny34#12'
+ENV MYSQL_DATABASE='wykladziny'
+ENV MAIL_TO='mkoziel045@gmail.com'
+ENV MAIL_SUBJECT='Order'
+ENV MAIL_HANDLER_URI = 'http://fitjarmail:587/mail'
 #expose ports
 EXPOSE 80
 EXPOSE 4000
