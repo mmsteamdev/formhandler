@@ -9,17 +9,17 @@ RUN mvn clean compile assembly:single
 FROM openjdk:11.0.9-jre
 # copy only the artifacts we need from the first stage and discard the rest
 COPY --from=MAVEN_BUILD /target/twojewykladzinyformhandler-1.0-SNAPSHOT-jar-with-dependencies.jar ./target/demo.jar
-COPY ./resources ./resources
+#COPY ./resources ./resources
 #COPY --from=MAVEN_BUILD /home/~/.m2/ /home/~/.m2/
 #set environmental variables to database
-ENV MYSQL_URL
-ENV MYSQL_USER
-ENV MYSQL_PASSWORD
-ENV MYSQL_ROOT_PASSWORD
-ENV MYSQL_DATABASE
-ENV MAIL_TO
-ENV MAIL_SUBJECT
-ENV MAIL_HANDLER_URI
+#ENV MYSQL_URL
+#ENV MYSQL_USER
+#ENV MYSQL_PASSWORD
+#ENV MYSQL_ROOT_PASSWORD
+#ENV MYSQL_DATABASE
+#ENV MAIL_TO
+#ENV MAIL_SUBJECT
+#ENV MAIL_HANDLER_URI
 #expose ports
 EXPOSE 80
 EXPOSE 4000
