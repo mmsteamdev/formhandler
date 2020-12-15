@@ -40,7 +40,7 @@ public class DataBaseHandler {
             this.connectToDB();
         }
         int index = 1;
-        String table = "kontakt";
+        String table = System.getenv("MYSQL_TABLE");
         PreparedStatement pst = null;
 
         pst = this.conn.prepareStatement("SET NAMES utf8");
